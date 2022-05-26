@@ -130,7 +130,7 @@ public class RomeNumber {
         return romeResult;
     }
 }
-        class Start{
+       public class Start{
             public static void main(String[] args) {
                 RomeNumber romeNumber = new RomeNumber();
                 romeNumber.expressionSeparated();
