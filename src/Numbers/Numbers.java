@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package Numbers;
 
 import java.util.Scanner;
@@ -10,7 +5,6 @@ import java.util.Scanner;
 public class Numbers {
     public Numbers() {
     }
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Input a number: ");

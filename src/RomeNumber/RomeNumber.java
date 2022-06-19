@@ -1,12 +1,5 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package RomeNumber;
-
 import java.util.Scanner;
-
 public class RomeNumber {
     String expression = "";
     String firstNumber = "";
@@ -19,7 +12,6 @@ public class RomeNumber {
 
     public RomeNumber() {
     }
-
     public void expressionSeparated() {
         Scanner scanner = new Scanner(System.in);
         this.expression = scanner.nextLine();
@@ -27,12 +19,11 @@ public class RomeNumber {
         this.firstNumber = expressionArray[0];
         this.secondNumber = expressionArray[1];
     }
-
     public int romeNumberToArabic(String romeNumber) {
         this.arabicNumber = 0;
         int[] arrayArabicNumber = new int[romeNumber.length()];
 
-        for(int i = 0; i < romeNumber.length(); ++i) {
+        for (int i = 0; i < romeNumber.length(); ++i) {
             if (romeNumber.charAt(i) == 'M') {
                 arrayArabicNumber[i] = 1000;
             }
@@ -69,7 +60,6 @@ public class RomeNumber {
 
         return this.arabicNumber;
     }
-
     public int resultArabicExpression() {
         if (this.expression.contains("+")) {
             this.arabicResult = this.firstArabicNumber + this.secondArabicNumber;
@@ -89,10 +79,9 @@ public class RomeNumber {
 
         return this.arabicResult;
     }
-
     public String arabicNumberToRome(int arabicNumber) {
         String romeNumberResult;
-        for(romeNumberResult = ""; arabicNumber >= 1000; arabicNumber -= 1000) {
+        for (romeNumberResult = ""; arabicNumber >= 1000; arabicNumber -= 1000) {
             romeNumberResult = romeNumberResult + "M";
         }
 
@@ -101,7 +90,7 @@ public class RomeNumber {
             arabicNumber -= 900;
         }
 
-        while(arabicNumber >= 500) {
+        while (arabicNumber >= 500) {
             romeNumberResult = romeNumberResult + "D";
             arabicNumber -= 500;
         }
@@ -111,7 +100,7 @@ public class RomeNumber {
             arabicNumber -= 400;
         }
 
-        while(arabicNumber >= 100) {
+        while (arabicNumber >= 100) {
             romeNumberResult = romeNumberResult + "C";
             arabicNumber -= 100;
         }
@@ -121,7 +110,7 @@ public class RomeNumber {
             arabicNumber -= 90;
         }
 
-        while(arabicNumber >= 50) {
+        while (arabicNumber >= 50) {
             romeNumberResult = romeNumberResult + "L";
             arabicNumber -= 50;
         }
@@ -131,7 +120,7 @@ public class RomeNumber {
             arabicNumber -= 40;
         }
 
-        while(arabicNumber >= 10) {
+        while (arabicNumber >= 10) {
             romeNumberResult = romeNumberResult + "X";
             arabicNumber -= 10;
         }
@@ -141,7 +130,7 @@ public class RomeNumber {
             arabicNumber -= 9;
         }
 
-        while(arabicNumber >= 5) {
+        while (arabicNumber >= 5) {
             romeNumberResult = romeNumberResult + "V";
             arabicNumber -= 5;
         }
@@ -151,14 +140,13 @@ public class RomeNumber {
             arabicNumber -= 4;
         }
 
-        while(arabicNumber >= 1) {
+        while (arabicNumber >= 1) {
             romeNumberResult = romeNumberResult + "I";
             --arabicNumber;
         }
 
         return romeNumberResult;
     }
-
     public String resultRome() {
         this.firstArabicNumber = this.romeNumberToArabic(this.firstNumber);
         this.secondArabicNumber = this.romeNumberToArabic(this.secondNumber);
